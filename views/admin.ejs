@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Адмін панель</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>👩‍💻 Адмін панель</h1>
+  <form action="/add-flower" method="POST" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Назва букета" required>
+    <input type="text" name="price" placeholder="Ціна" required>
+    <input type="text" name="season" placeholder="Сезон (наприклад: Літо)">
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Додати букет</button>
+  </form>
+</body>
+</html>

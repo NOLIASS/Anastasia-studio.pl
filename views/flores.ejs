@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Галерея квітів</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>🌸 Наші букети</h1>
+  <div class="main-content__flowers-box">
+    <% flowers.forEach(flower => { %>
+      <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="<%= flower.image %>" alt="<%= flower.name %>">
+        <p class="flower-name"><%= flower.name %></p>
+        <p>Ціна: <%= flower.price %> грн</p>
+        <p>Сезон: <%= flower.season %></p>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>

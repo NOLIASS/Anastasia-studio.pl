@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Адмін панель</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Адмін меню – Додати квітку</h1>
+
+  <form action="/add-flower" method="POST" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Назва квітки" required>
+    <input type="text" name="price" placeholder="Ціна (наприклад: 200 грн)" required>
+    <input type="text" name="season" placeholder="Сезон (наприклад: Весна)">
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Додати квітку</button>
+  </form>
+
+  <p style="text-align:center;">
+    <a href="/pl/flores/index.html">⬅ Повернутися на сайт</a>
+  </p>
+</body>
+</html>

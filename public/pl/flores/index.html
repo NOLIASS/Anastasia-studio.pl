@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anastasiia studio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector('.main-content__flowers-box');
+
+    fetch('/api/flowers')
+      .then(res => res.json())
+      .then(flowers => {
+        container.innerHTML = ""; // очистимо старе
+
+        flowers.forEach(f => {
+          const box = document.createElement('div');
+          box.classList.add('main-content__flower-box');
+          box.innerHTML = `
+            <img src="${f.image}" class="main-content__flower-box__flower">
+            <div class="flower-name">${f.name}</div>
+            <div class="flower-price">${f.price} грн</div>
+          `;
+          container.appendChild(box);
+        });
+      })
+      .catch(err => {
+        console.error("Помилка завантаження квітів:", err);
+      });
+  });
+</script>
+
+<body>
+ <div class="contentik">
+   <header class="headerr">
+    <div class="headerr__container">
+    <a href="file:///C:/Users/Nazar/Desktop/Anastasia-studio.pl/flower-admin/pl/index.html" class="logo">ANASTASIIA</a>
+
+    <div class="menu__icon" id="menuIcon">
+      <span></span>
+    </div>
+
+    <nav class="menu__body" id="menuBody">
+      <ul class="menu__list">
+        <li><a href="file:///C:/Users/Nazar/Desktop/Anastasia-studio.pl/flower-admin/pl/flores/index.html" class="menu__link">Букети</a></li>
+        <li><a href="#" class="menu__link">Контакти</a></li>
+      </ul>
+    </nav>
+    </div>
+   </header>
+   <div class="main-content">
+    <div class="main-content_search">
+       <input type="text" id="search" placeholder="Пошук...">
+       </input>
+    </div> 
+    <div class="main-content__flowers-box">
+      <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl\flower-admin\pl/1.JPG">
+        <p class="flower-name">101 Pink O’Hara</p>
+        <p>none</p>
+     </div>
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl\flower-admin\pl/2.JPG">
+        <p class="flower-name">101 Pink O’Hara</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">  
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl\flower-admin\pl/3.JPG">
+        <p class="flower-name">Flower box мікс квітів</p>
+        <p>none</p>
+     </div>    
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl\flower-admin\pl/4.JPG">
+        <p class="flower-name">Flower box мікс квітів</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/5.JPG">
+        <p class="flower-name">Flower box мікс квітів</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/6.JPG">
+        <p class="flower-name">Flower box мікс квітів</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/7.JPG">
+        <p class="flower-name">Мікс квітів</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/8.JPG">
+        <p class="flower-name">Мікс квітів</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/9.JPG">
+        <p class="flower-name">Букет з ромашок</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/10.JPG">
+        <p class="flower-name">Букет з ромашок</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/11.JPG">
+        <p class="flower-name">Букет з кущової троянди і піон</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/12.JPG">
+        <p class="flower-name">Букет з кущової троянди і піон</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/13.JPG">
+        <p class="flower-name">Букет з кущової троянди і піон</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/14.JPG">
+        <p class="flower-name">Букет з кущової троянди</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box"> 
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/15.JPG">
+        <p class="flower-name">Букет з кущової троянди</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/16.JPG">
+        <p class="flower-name">Мікс троянд</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/17.JPG">
+        <p class="flower-name">Букет мікс</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/18.JPG">
+        <p class="flower-name">Букет мікс</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/19.JPG">
+        <p class="flower-name">Букет з білою кущовою трояндою</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/20.JPG">
+        <p class="flower-name">Букет з білою кущовою трояндою</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/21.JPG">
+        <p class="flower-name">Букет з гортензіями</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/22.JPG">
+        <p class="flower-name">Букет з гортензіями</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/23.JPG">
+        <p class="flower-name">Букет з гіпсофіли</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/24.JPG">
+        <p class="flower-name">Букет з гортензією, трояндами та еустомою</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box"> 
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/25.JPG">
+        <p class="flower-name">Букет з гортензією, трояндами та еустомою</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/26.JPG">
+        <p class="flower-name">Мікс троянд з оксіпеталумом</p>
+        <p>none</p>
+     </div>   
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/27.JPG">
+        <p class="flower-name">Мікс троянд з оксіпеталумом</p>
+        <p>none</p>
+     </div>
+     <div class="main-content__flower-box">
+        <img class="main-content__flower-box__flower" src="C:\Users\Nazar\Desktop\Anastasia-studio.pl/flower-admin\pl/28.JPG">
+        <p class="flower-name">Мікс троянд з оксіпеталумом</p>
+        <p>none</p>
+     </div>
+    </div>
+   </div> 
+   <footer>
+   </footer> 
+ </div>  
+</body>
+</html>
